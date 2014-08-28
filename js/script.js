@@ -1,20 +1,21 @@
 var elements = [];
+var colors = ["red", "orange", "pink", "blue", "green", "purple"];
+var color, count = 0;
 
-$('*').on('click mousedown mouseup focus blur keydown change', function(e) {
+$('*').on('click', function(e) {
 	$this = $(this);
 
-	elements.push($this.context);
+	color = colors[Math.floor((Math.random() * 6))];
+	count++;
+
+	(function(el) {
+		setTimeout(function() {
+			$(el).css('outlineColor', color);
+		}, count * 250);
+	})($this.context);
 
 	if ($this.context.localName === 'html') {
-		addBorders(elements);
+		count = 0;
 	}
 
 });
-
-function addBorders(elements) {
-	$.each(elements, function(i) {
-            setTimeout(function() {
-		$(elements[i]).addClass('border');
-            }, i * 250);
-        });
-}

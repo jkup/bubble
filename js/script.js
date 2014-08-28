@@ -1,17 +1,16 @@
 var elements = [];
-var colors = ["red", "orange", "pink", "blue", "green", "purple"];
 var color, count = 0;
 
 $('*').on('click', function(e) {
 	$this = $(this);
 
-	color = colors[Math.floor((Math.random() * 6))];
+	color = '#' + Math.floor(Math.random()*16777215).toString(16);
 	count++;
 
 	(function(el) {
 		setTimeout(function() {
 			$(el).css('outlineColor', color);
-		}, count * 250);
+		}, count * 150);
 	})($this.context);
 
 	if ($this.context.localName === 'html') {

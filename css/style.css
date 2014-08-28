@@ -1,0 +1,15 @@
+.wrapper {
+	width: 250px;
+	height: 250px;
+	background: blue;
+}
+
+.inner {
+	width: 100px;
+	height: 100px;
+	background: purple;
+}
+
+.border {
+  border: 1px solid red;
+}

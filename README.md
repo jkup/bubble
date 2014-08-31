@@ -1,4 +1,4 @@
-bubble
-======
+# Bubble
 
-Watch event bubbling on any website
+Chrome plugin for watching JavaScript events bubble.
+-----

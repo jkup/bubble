@@ -1,0 +1,16 @@
+{
+  "name": "Bubble",
+  "version": "0.0.1",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["startup.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Watch event bubbling"
+  },
+  "manifest_version": 2
+}
